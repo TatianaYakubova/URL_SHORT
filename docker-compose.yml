@@ -1,0 +1,19 @@
+
+services:
+  todo_service:
+    build:
+      context: ./todo_service
+      dockerfile: Dockerfile
+    volumes:
+      - ./todo_service/tasks.db:/app/tasks.db
+    ports:
+      - "8000:8000"
+
+  url_shortener_service:
+    build:
+      context: ./url_shortener_service
+      dockerfile: Dockerfile
+    volumes:
+      - ./url_shortener_service/urls.db:/app/urls.db
+    ports:
+      - "8001:8001"

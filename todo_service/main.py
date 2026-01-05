@@ -5,6 +5,7 @@ from typing import List, Optional
 
 app = FastAPI(title="To-Do Service")
 
+
 # Модель для задачи
 class Item(BaseModel):
     id: Optional[int] = None  # Необязательное поле для ID
