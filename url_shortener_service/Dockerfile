@@ -1,5 +1,5 @@
 # Версия Питона
-FROM python:3.11-slim
+FROM python:3.13.5-slim
 
 # Рабочая папка внутри контейнера
 WORKDIR /app
